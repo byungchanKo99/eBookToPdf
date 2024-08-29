@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ebooktopdf"
+version = "0.1.0"
+description = ""
+authors = ["고병찬 <70642609+byungchanKo99@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+mss = "^9.0.1"
+pyautogui = "^0.9.54"
+natsort = "^8.4.0"
+pynput = "^1.7.7"
+pyside6 = "^6.7.2"
+pillow = "^10.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

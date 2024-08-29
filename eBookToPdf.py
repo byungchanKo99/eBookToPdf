@@ -218,13 +218,10 @@ class MainWindow(QMainWindow):
         try:
             # 화면 전환 위해 한번 클릭
             time.sleep(2)
-            m.position = (self.posX1, self.posY1)
-
+            pyautogui.moveTo(self.posX1, self.posY1)
             time.sleep(2)
-            m.click(mouse_left)
+            pyautogui.click()
             time.sleep(2)
-            m.position = (pos_x, pos_y)
-
             # 파일 저장
             while self.num <= self.total_page:
 
@@ -238,8 +235,7 @@ class MainWindow(QMainWindow):
                     mss.tools.to_png(img.rgb, img.size, output=f'pdf_images/img_{str(self.num).zfill(4)}.png')
 
                 # 페이지 넘기기
-                kb_control.press(Key.right)
-                kb_control.release(Key.right)
+                pyautogui.press('right')
 
                 self.num += 1
 
